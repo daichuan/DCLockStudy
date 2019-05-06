@@ -393,4 +393,4 @@ NSCondition的加锁过程和NSLock几乎一致，耗时上应该差不多。
 
 1、[深入理解iOS开发中的锁](https://bestswifter.com/ios-lock/#nsconditionlock)
 
-2、[iOS的线程安全与锁](
+2、[iOS的线程安全与锁](http://www.cocoachina.com/ios/20171218/21570.html)
