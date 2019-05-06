@@ -91,11 +91,11 @@ iOS开发中，锁是用来解决线程安全的问题的工具。那么线程�
 
 - 互斥锁：用于保护临界区，确保同一时间只有一个线程访问数据。对共享资源的访问，先对互斥量进行加锁，如果互斥量已经上锁，调用线程会阻塞，直到互斥量被解锁。在完成了对共享资源的访问后，要对互斥量进行解锁。
 
-接下来主要讲几种锁 <a href="自旋锁OSSpinLock">自旋锁OSSpinLock</a>、<a href="信号量">信号量</a>、<a href="pthread_mutex">pthread_mutex</a>、<a href="NSLock">NSLock</a>、<a href="NSCondition">NSCondition</a>、<a href="NSRecursiveLock">NSRecursiveLock</a>、<a href="NSConditionLock">NSConditionLock</a>、<a href="@synchronized">@synchronized</a>。这里参考了[深入理解iOS开发中的锁](https://bestswifter.com/ios-lock/#nsconditionlock)；
+接下来主要讲几种锁 [自旋锁OSSpinLock](#自旋锁osspinlock)、[信号量](#信号量)、[pthread_mutex](#pthread_mutex)、<a href="NSLock">NSLock</a>、<a href="NSCondition">NSCondition</a>、<a href="NSRecursiveLock">NSRecursiveLock</a>、<a href="NSConditionLock">NSConditionLock</a>、<a href="@synchronized">@synchronized</a>。这里参考了[深入理解iOS开发中的锁](https://bestswifter.com/ios-lock/#nsconditionlock)；
 
 然后这些锁我在学习过程中写了一个简单的[demo](https://github.com/daichuan/DCLockStudy)，里面有他们的使用方法；
 
-#### <a name="自旋锁 OSSpinLock">自旋锁 OSSpinLock</a>
+#### 自旋锁OSSpinLock
 
 ------
 
@@ -105,7 +105,7 @@ iOS开发中，锁是用来解决线程安全的问题的工具。那么线程�
 
 我所知道的自旋锁只有OSSpinLock，不过YY大神已经说过OSSpinLock不再安全了，因此这里不做过多的介绍，如果有兴趣可以去看[不再安全的 OSSpinLock](https://blog.ibireme.com/2016/01/16/spinlock_is_unsafe_in_ios/);
 
-#### <a name="信号量">信号量</a>
+#### 信号量
 
 ------
 
@@ -146,7 +146,7 @@ dispatch_semaphore的实现原理和自旋锁不一样，是根据信号量判�
 }
 ```
 
-#### <a name="pthread_mutex">pthread_mutex</a>
+#### pthread_mutex
 
 ------
 
