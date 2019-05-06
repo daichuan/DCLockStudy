@@ -189,7 +189,7 @@ pthread_mutex 表示互斥锁。互斥锁的实现原理与信号量非常相似
 
 pthread_mutex 还支持递归锁，只要将类型设置为`PTHREAD_MUTEX_RECURSIVE`就可以。
 
-#### <a name="NSLock">NSLock</a>
+#### NSLock
 
 ------
 
@@ -224,7 +224,7 @@ NSLock遵守了`NSLocking`协议，`NSLocking`协议其实很简单，只需要�
 
 - ` lockBeforeDate`尝试在某个时间之前获取锁，如果在这个时间内没有获取到锁则返回`NO`，不会阻塞线程;
 
-#### <a name="NSCondition">NSCondition</a>
+#### NSCondition
 
 ------
 
@@ -276,7 +276,7 @@ NSCondition的加锁过程和NSLock几乎一致，耗时上应该差不多。
 
 ```
 
-#### <a name="NSConditionLock">NSConditionLock</a>
+#### NSConditionLock
 
 ------
 
@@ -333,7 +333,7 @@ NSCondition的加锁过程和NSLock几乎一致，耗时上应该差不多。
 }
 ```
 
-#### <a name="NSRecursiveLock">NSRecursiveLock</a>
+#### NSRecursiveLock
 
 ------
 
@@ -373,7 +373,7 @@ NSCondition的加锁过程和NSLock几乎一致，耗时上应该差不多。
 }
 ```
 
-#### <a name="@synchronized">@synchronized</a>
+#### @synchronized
 
 ------
 
